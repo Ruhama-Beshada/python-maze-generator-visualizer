@@ -1,4 +1,4 @@
-# 🧩 Building and Running Mazes (Python + Pygame)
+#  Building and Running Mazes (Python + Pygame)
 
 A fully interactive maze generation and maze solving visualization project built using **Python** and **Pygame**.  
 This project demonstrates how classical graph traversal algorithms such as **Depth First Search (DFS)** and **stack-based backtracking** can be used to dynamically generate and solve proper mazes in real time.
@@ -10,7 +10,7 @@ The project visually simulates an invisible “mouse” that:
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 The objective of this project is to:
 
@@ -33,7 +33,7 @@ The project implements:
 
 ---
 
-# 🎯 Features
+#  Features
 
 - Random perfect maze generation  
 - Real-time animation of maze creation  
@@ -48,7 +48,7 @@ The project implements:
 
 ---
 
-# 🧠 Maze Generation Algorithm — DFS Backtracking
+#  Maze Generation Algorithm — DFS Backtracking
 
 The maze generation system uses a **Depth First Search (DFS)** traversal algorithm combined with a **stack for backtracking**.
 
@@ -70,7 +70,7 @@ When the mouse reaches a dead end:
 
 This process continues until all cells are visited.
 
-### 🧩 Result
+###  Result
 
 The maze becomes a **perfect maze (tree structure)**:
 - All cells are connected  
@@ -79,7 +79,7 @@ The maze becomes a **perfect maze (tree structure)**:
 
 ---
 
-# 🐭 Stack-Based DFS “Mouse” Logic
+#  Stack-Based DFS “Mouse” Logic
 
 The project simulates a virtual mouse that:
 
@@ -93,7 +93,7 @@ This creates a real-time visualization of maze construction.
 
 ---
 
-# 🧱 Maze Representation
+#  Maze Representation
 
 The project uses the required assignment structure:
 
@@ -104,21 +104,21 @@ eastWall  = [[1 for _ in range(COLS + 1)] for _ in range(ROWS)]
 
 ---
 
-## 🔍 Meaning of Values
+##  Meaning of Values
 
 * `1` → wall exists
 * `0` → wall removed
 
 ---
 
-## 🧩 Wall Types
+##  Wall Types
 
 * `northWall` → horizontal walls
 * `eastWall` → vertical walls
 
 ---
 
-# 🎨 Visualization (Pygame)
+#  Visualization (Pygame)
 
 The project uses **Pygame** to render everything in real time:
 
@@ -129,7 +129,7 @@ The project uses **Pygame** to render everything in real time:
 
 ---
 
-# 🧭 Maze Solver Algorithm
+# Maze Solver Algorithm
 
 After generation, a second **DFS-based solver** finds the path.
 
@@ -163,7 +163,7 @@ After generation, a second **DFS-based solver** finds the path.
 
 ---
 
-# 🚪 Start and End Points
+#  Start and End Points
 
 The maze is fixed as:
 
@@ -172,7 +172,7 @@ The maze is fixed as:
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 | Technology    | Purpose                     |
 | ------------- | --------------------------- |
@@ -205,7 +205,7 @@ maze-project/
 
 ---
 
-# ⚙️ How to Run the Project
+# How to Run the Project
 
 ## 1. Install dependencies
 
@@ -221,15 +221,15 @@ python src/main.py
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
-## 🧩 Final Maze Output
+## Final Maze Output
 
 ![Final Maze Output](maze-project/screenshots/final_maze.png)
 
 ---
 
-# 🧠 Key Concepts Demonstrated
+# Key Concepts Demonstrated
 
 * Depth First Search (DFS)
 * Stack-based backtracking
@@ -240,7 +240,7 @@ python src/main.py
 
 ---
 
-# 🧩 System Workflow
+# System Workflow
 
 ## Maze Generation:
 
@@ -260,7 +260,7 @@ python src/main.py
 
 ---
 
-# 🏁 Final Result
+# Final Result
 
 ✔ Random maze generation
 ✔ Automated maze solving
@@ -271,7 +271,7 @@ python src/main.py
 
 ---
 
-# 🚀 Conclusion
+# Conclusion
 
 This project demonstrates how **graph algorithms (DFS)** and **stack-based backtracking** can be used to generate and solve mazes visually.
 
@@ -284,8 +284,3 @@ It combines:
 * Software modularity
 
 into a complete interactive system.
-
-```
-
----
-
