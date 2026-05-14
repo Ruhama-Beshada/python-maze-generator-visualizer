@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from renderer import draw_maze
 from maze_generator import generate_maze
+from maze_solver import MazeSolver
 
 pygame.init()
 
@@ -10,7 +11,11 @@ pygame.display.set_caption("Maze Generator")
 
 clock = pygame.time.Clock()
 
-generate_maze()  # 👈 MUST HAPPEN ONCE HERE
+# STEP 1: generate maze ONCE
+generate_maze()
+
+# STEP 2: create solver
+solver = MazeSolver()
 
 running = True
 
@@ -22,9 +27,14 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+    # clear screen
     screen.fill(WHITE)
 
+    # draw maze
     draw_maze(screen)
+
+    # ⭐️ STEP 3: MOVE SOLVER ONE STEP PER FRAME
+    solver.step()
 
     pygame.display.update()
 
