@@ -1,7 +1,7 @@
 import pygame
 from constants import *
 from renderer import draw_maze
-from maze_generator import MazeGenerator
+from maze_generator import generate_maze
 
 pygame.init()
 
@@ -10,11 +10,12 @@ pygame.display.set_caption("Maze Generator")
 
 clock = pygame.time.Clock()
 
-generator = MazeGenerator()  # create generator
+generate_maze()  # 👈 MUST HAPPEN ONCE HERE
 
 running = True
 
 while running:
+
     clock.tick(FPS)
 
     for event in pygame.event.get():
@@ -22,9 +23,6 @@ while running:
             running = False
 
     screen.fill(WHITE)
-
-    # 👉 THIS IS THE MAGIC LINE (animation step)
-    generator.step()
 
     draw_maze(screen)
 
