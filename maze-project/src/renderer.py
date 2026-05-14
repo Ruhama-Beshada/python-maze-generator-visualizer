@@ -1,11 +1,15 @@
 import pygame
 from constants import *
 
-# WALL DATA (shared with generator)
+# =========================
+# MAZE WALL DATA
+# =========================
 northWall = [[1 for _ in range(COLS)] for _ in range(ROWS + 1)]
 eastWall = [[1 for _ in range(COLS + 1)] for _ in range(ROWS)]
 
-# SOLVER VISUAL DATA (NEW)
+# =========================
+# SOLVER VISUAL DATA
+# =========================
 solver_path = []
 dead_ends = []
 
@@ -16,10 +20,8 @@ def draw_maze(screen):
     start_y = 50
 
     # =========================
-    # DRAW MAZE WALLS
+    # DRAW NORTH WALLS
     # =========================
-
-    # NORTH WALLS (HORIZONTAL)
     for row in range(ROWS + 1):
         for col in range(COLS):
 
@@ -33,7 +35,9 @@ def draw_maze(screen):
 
                 pygame.draw.line(screen, (0, 0, 0), (x1, y1), (x2, y2), 2)
 
-    # EAST WALLS (VERTICAL)
+    # =========================
+    # DRAW EAST WALLS
+    # =========================
     for row in range(ROWS):
         for col in range(COLS + 1):
 
@@ -50,8 +54,7 @@ def draw_maze(screen):
     # =========================
     # DRAW SOLVER PATH (RED)
     # =========================
-    for cell in solver_path:
-        r, c = cell
+    for r, c in solver_path:
 
         cx = start_x + c * CELL_SIZE + CELL_SIZE // 2
         cy = start_y + r * CELL_SIZE + CELL_SIZE // 2
@@ -61,8 +64,7 @@ def draw_maze(screen):
     # =========================
     # DRAW DEAD ENDS (BLUE)
     # =========================
-    for cell in dead_ends:
-        r, c = cell
+    for r, c in dead_ends:
 
         cx = start_x + c * CELL_SIZE + CELL_SIZE // 2
         cy = start_y + r * CELL_SIZE + CELL_SIZE // 2
